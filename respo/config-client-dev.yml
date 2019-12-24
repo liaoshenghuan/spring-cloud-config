@@ -9,7 +9,7 @@ spring:
           uri: https://github.com/liaoshenghuan/spring-cloud-config
           search-paths: respo # 查找的路径
           username: liaoshenghuan
-          password:
+          password: huan10086......
 
 server:
   # 此服务端口不可更改，需要更改是只能去bootstrap.properties文件里做更改
