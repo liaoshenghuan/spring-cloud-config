@@ -10,7 +10,7 @@ spring:
       content-type: text/html
 
 server:
-  port: 8866
+  port: 8865
 
 # feign 自带熔断器，默认是关闭的，需要再配置打开，配置如下
 feign:
