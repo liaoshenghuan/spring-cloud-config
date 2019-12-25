@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: hello-spring-cloud-zuul
+
+
+server:
+  port: 8879
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8886/eureka/
+
+zuul:
+  routes:
+    #聚合以下两个服务，名称可以随便取（api-a）
+    api-a:
+      path: /api/a/**
+      serviceId: hello-spring-cloud-web-admin-ribbon
+    api-b:
+      path: /api/b/**
+      serviceId: hello-spring-cloud-web-admin-feign
