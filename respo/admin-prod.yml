@@ -1,0 +1,35 @@
+spring:
+    application:
+      name: hello-spring-cloud-admin
+
+    # 服务追踪配置
+    zipkin:
+      base-url: http://localhost:9410
+
+  # config client 云配置
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#      name: web-admin-feign
+#      label: devlop
+#      profile: dev  # 加载dev文件
+
+# 以下为本地配置，启用云配置后删除
+server:
+  port: 8083
+
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8886/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info"]
