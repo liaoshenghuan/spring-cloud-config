@@ -12,6 +12,11 @@ spring:
     sampler:
       probability: 1
 
+  # 添加服务监控-客户端服务地址
+  boot:
+    admin:
+      client:
+        url: http://localhost:8083
 server:
   port: 8884
 
