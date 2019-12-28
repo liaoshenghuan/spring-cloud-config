@@ -12,7 +12,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8886/eureka/
+      defaultZone: http://localhost:8887/eureka/
 
 zuul:
   routes:
