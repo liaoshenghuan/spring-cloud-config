@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: hello-spring-cloud-zipkin
+
+  #解决The bean 'characterEncodingFilter', defined in class path resource....
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 9411 # 默认端口
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8887/eureka/
+
+#解决IllegalArgumentException: Prometheus requires that all......
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
