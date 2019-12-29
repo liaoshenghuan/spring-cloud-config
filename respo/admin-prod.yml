@@ -15,12 +15,7 @@ spring:
 server:
   port: 8083
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8886/eureka/
-
-# 健康检查
+# 健康检查 因为存在两个标签值，托管时会无法实现标签名
 #management:
 #  endpoint:
 #    health:
@@ -29,3 +24,9 @@ eureka:
 #    web:
 #      exposure:
 #        include: ["health","info"]
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8886/eureka/
+
