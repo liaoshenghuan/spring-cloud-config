@@ -1,10 +1,10 @@
 spring:
-    application:
-      name: hello-spring-cloud-admin
+  application:
+    name: hello-spring-cloud-admin
 
     # 服务追踪配置
-    zipkin:
-      base-url: http://localhost:9411
+  zipkin:
+    base-url: http://localhost:9411
 
 
 # 以下为本地配置，启用云配置后删除
