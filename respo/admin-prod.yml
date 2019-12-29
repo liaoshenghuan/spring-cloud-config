@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: hello-spring-cloud-admin
+
+  # 服务追踪配置
+  zipkin:
+    base-url: http://localhost:9410
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: admin
+      label: devlop
+      profile: dev
+
+server:
+  port: 8083
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8886/eureka/
+
+# 健康检查
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info"]
