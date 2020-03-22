@@ -20,6 +20,16 @@ spring:
 server:
   port: 8884
 
+## 健康检查
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info"] # * 全部日志监控输出
+
 eureka:
   client:
     serviceUrl:
